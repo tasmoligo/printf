@@ -6,7 +6,14 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-int _putchar(char c);
-int p_str(char *str);
+typedef struc fun_specifier
+{
+	char character;
+
+	int *f_ptr(va_list);
+} fun_t;
+
+int _putchar(va_list);
+int p_str(va_list);
 int _printf(const char *format, ...);
 #endif/* MAIN_H */
