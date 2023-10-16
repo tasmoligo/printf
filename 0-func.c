@@ -38,21 +38,32 @@ int p_str(va_list p_args)
   * @n: integer to be printed
   */
 
-void print_number(int n)
+void print_number(va_list p_args)
 {
-	unsigned int n1;
+	int n = va_arg(p_args, int);
+	char array[20];
+	int index = 0;
+	int digt, j;
 
-	if(n < 0)
+	if (n < 0)
 	{
-		n1 = -n;
-		_putchar('-');
-	}else
-	{
-		n1 = n;
+		write(1, "_", 1);
+		n = -n;
 	}
-	if (n1 / 10)
+	if (n == 0)
 	{
-		print_number(n1 / 10);
+		write(1, "0", 1);
+		return;
 	}
-	_putchar((n1 % 10) + '0');
+	while (n > 0)
+	{
+		digt = n % 10;
+		array[index] = '0' + digt;
+		n /= 10;
+		index++;
+	}
+	for (j = index -1; j >= 0; j--)
+	{
+		write(1, &array[j], 1);
+	}
 }

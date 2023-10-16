@@ -22,5 +22,5 @@ typedef struct fun_specifier
 int _putchar(va_list);
 int p_str(va_list);
 int _printf(const char *format, ...);
-void print_number(int n);
+void print_number(va_list);
 #endif/* MAIN_H */
