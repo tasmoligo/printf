@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				write(1, &scan, 1);
 				len++;
 			}
-			else if (scan == 's' || scan == 'c')
+			else if (scan == 's' || scan == 'c' || scan == 'd' || scan == 'i')
 			{
 				len += (fun_checker(scan))(p_args);
 			}
