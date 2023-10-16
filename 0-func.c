@@ -35,7 +35,7 @@ int p_str(va_list p_args)
 
 /**
   * print_number - print an integer
-  * @n: integer to be printed
+  * @p_args: integer to be printed
   */
 
 void print_number(va_list p_args)
@@ -62,7 +62,7 @@ void print_number(va_list p_args)
 		n /= 10;
 		index++;
 	}
-	for (j = index -1; j >= 0; j--)
+	for (j = index - 1; j >= 0; j--)
 	{
 		write(1, &array[j], 1);
 	}
