@@ -2,21 +2,21 @@
 
 /**
   * fun_checker - determine the function to use
-  * @scan: conatins the specifiers
+  * @scan: contains the specifiers
   * Return: the func call
   */
 
-int (*fun_checker(scan))(va_list)
+int (*fun_checker(char scan))(va_list)
 {
-	int index = 0;
+	int index;
 
 	fun_t array[] = {
 		{'c', _putchar},
 		{'s', p_str},
-		{NULL, NULL}
-	}
+		{'\0', NULL}
+	};
 
-	for (; array[index].character != NULL; index++)
+	for (index = 0; array[index].character != '\0'; index++)
 	{
 		if (scan == array[index].character)
 		{

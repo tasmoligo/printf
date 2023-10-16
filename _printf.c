@@ -8,8 +8,11 @@
 
 int _printf(const char *format, ...)
 {
-	int len = 0;
+	int index, len = 0;
 	char scan;
+
+	char (*fun_checker(char))(va_list);
+
 	va_list p_args;
 
 	va_start(p_args, format);
@@ -25,8 +28,15 @@ int _printf(const char *format, ...)
 		{
 			index++;
 			scan = format[index];
-			if (scan == 's' || scan == 'c' || scan == '%')
+			if (scan == '%')
+			{
+				write(1, &scan, 1);
+				len++;
+			}
+			if (scan == 's' || scan == 'c')
+			{
 				len += (fun_checker(scan))(p_args);
+			}
 		}
 		else
 		{
@@ -34,9 +44,7 @@ int _printf(const char *format, ...)
 			len++;
 		}
 	}
-
-
-	va_end(p_args)
+	va_end(p_args);
 
 	return (len);
 }

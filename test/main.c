@@ -1,5 +1,4 @@
-#include <limits.h>
-#include <stdio.h>
+
 #include "main.h"
 
 /**
@@ -18,6 +17,10 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    _printf("String:[%%]\n");
+    printf("String:[%%]\n");
+    _printf();
+    printf();
 
     return (0);
 }
