@@ -13,6 +13,8 @@ int (*fun_checker(char scan))(va_list)
 	fun_t array[] = {
 		{'c', _putchar},
 		{'s', p_str},
+		{'d', print_number}'
+		{'i', print_number},
 		{'\0', NULL}
 	};
 
