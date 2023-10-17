@@ -24,8 +24,4 @@ int p_str(va_list);
 int _printf(const char *format, ...);
 void print_number(va_list);
 void binary(va_list);
-int (*fun_checker(char scan))(va_list);
-int binary_adapter(va_list);
-int adapter_func(va_list);
-
 #endif/* MAIN_H */

@@ -3,12 +3,14 @@
 void binary(va_list p_args)
 {
 	int i = 0, j;
+	char zero, k;
 	int arr[1024];
 	int num = va_arg(p_args, int);
 
 	if (num == 0)
 	{
-		_putchar(num);
+		zero = '0';
+		write(1, &zero, 1);
 		return;
 	}
 
@@ -19,6 +21,7 @@ void binary(va_list p_args)
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(arr[j] + '0');
+		k = arr[j] + '0';
+		write(1, &k, 1);
 	}
 }
