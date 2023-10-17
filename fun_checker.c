@@ -13,6 +13,17 @@ int adapter_func(va_list p_args)
 }
 
 /**
+  * binary_adapter - converts binary to int data type
+  * @p_args: list value
+  * Return: 0
+  */
+int binary_adapter(va_list p_args)
+{
+	binary(p_args);
+	return (0);
+}
+
+/**
   * fun_checker - determine the function to use
   * @scan: contains the specifiers
   * Return: the func call
@@ -26,6 +37,7 @@ int (*fun_checker(char scan))(va_list)
 		{'s', p_str},
 		{'d', adapter_func},
 		{'i', adapter_func},
+		{'b', binary_adapter},
 		{'\0', NULL}
 	};
 
