@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+  * binary - convert to binary
+  * @p_args: parameter
+  * Return: nothing
+  */
 
 void binary(va_list p_args)
 {
