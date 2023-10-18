@@ -23,6 +23,16 @@ int binary_adapter(va_list p_args)
 }
 
 /**
+  * octal_adapter - converts binary to int data type
+  * @p_args: list value
+  * Return: 0
+  */
+int octal_adapter(va_list p_args)
+{
+	octal(p_args);
+	return (0);
+}
+/**
   * fun_checker - determine the function to use
   * @scan: contains the specifiers
   * Return: the func call
@@ -37,6 +47,7 @@ int (*fun_checker(char scan))(va_list)
 		{'d', adapter_func},
 		{'i', adapter_func},
 		{'b', binary_adapter},
+		{'o', octal_adapter},
 		{'\0', NULL}
 	};
 

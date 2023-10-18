@@ -24,5 +24,5 @@ int p_str(va_list);
 int _printf(const char *format, ...);
 void print_number(va_list);
 void binary(va_list);
-
+void octal(va_list);
 #endif/* MAIN_H */

@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				len++;
 			}
 			else if (scan == 's' || scan == 'c' || scan == 'd'
-					|| scan == 'i' || scan == 'b')
+					|| scan == 'i' || scan == 'b' || scan == 'o')
 			{
 				len += (fun_checker(scan))(p_args);
 			}
