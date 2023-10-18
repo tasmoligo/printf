@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
   * binary - convert to binary
   * @p_args: parameter

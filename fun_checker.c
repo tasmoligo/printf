@@ -5,7 +5,6 @@
   * @p_args: list value
   * Return: 0
   */
-
 int adapter_func(va_list p_args)
 {
 	print_number(p_args);
