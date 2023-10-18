@@ -31,3 +31,35 @@ void binary(va_list p_args)
 		write(1, &k, 1);
 	}
 }
+
+/**
+  * octal - convert to base 8
+  * @p_args: parameter
+  * Return: nothing
+  */
+
+void octal(va_list p_args)
+{
+	int i = 0, j;
+	char zero, k;
+	int arr[1024];
+	int num = va_arg(p_args, int);
+
+	if (num == 0)
+	{
+		zero = '0';
+		write(1, &zero, 1);
+		return;
+	}
+
+	for (i = 0; num > 0; i++)
+	{
+		arr[i] = num % 8;
+		num /= 8;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		k = arr[j] + '0';
+		write(1, &k, 1);
+	}
+}
